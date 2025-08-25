@@ -18,7 +18,7 @@ namespace Identity5Test
         }
 
         private void 상담하기ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        { // = 정보보기. 뭔가 꼬여서 수정할 수 없음...
 
         }
 
