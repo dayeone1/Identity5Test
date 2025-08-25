@@ -16,5 +16,25 @@ namespace Identity5Test
         {
             InitializeComponent();
         }
+
+        private void 상담하기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 운세테스트내역ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
