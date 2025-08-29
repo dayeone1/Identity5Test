@@ -118,11 +118,13 @@
             // tbResult
             // 
             this.tbResult.Location = new System.Drawing.Point(17, 20);
+            this.tbResult.MaxLength = 50000;
             this.tbResult.Multiline = true;
             this.tbResult.Name = "tbResult";
             this.tbResult.ReadOnly = true;
             this.tbResult.Size = new System.Drawing.Size(359, 351);
             this.tbResult.TabIndex = 0;
+            this.tbResult.TextChanged += new System.EventHandler(this.tbResult_TextChanged);
             // 
             // menuStrip1
             // 

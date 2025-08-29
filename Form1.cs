@@ -74,6 +74,9 @@ namespace Identity5Test
             string Tier = tbTier.Text;
             string Mode = tbMode.Text;
             string result = GetFortune();
+
+            MessageBox.Show(result, $"Result 값 확인");
+
             string day = result.Split('|')[0];
             string message = result.Split('|')[1];
             String survivor = result.Split('|')[2];
@@ -109,6 +112,11 @@ namespace Identity5Test
         }
 
         private void tbTier_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbResult_TextChanged(object sender, EventArgs e)
         {
 
         }
