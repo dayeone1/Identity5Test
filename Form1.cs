@@ -14,7 +14,6 @@ namespace Identity5Test
     public partial class Form1 : Form
     {
         List<string> results;
-
         public Form1()
         {
             InitializeComponent();
@@ -56,7 +55,17 @@ namespace Identity5Test
 
         private void 운세테스트내역ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FormHistory form = Application.OpenForms["FormHistory"] as FormHistory;
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                form = new FormHistory(this);
+                form.Show();
+            }
+
         }
 
         private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,8 +84,6 @@ namespace Identity5Test
             string Mode = tbMode.Text;
             string result = GetFortune();
 
-            MessageBox.Show(result, $"Result 값 확인");
-
             string day = result.Split('|')[0];
             string message = result.Split('|')[1];
             String survivor = result.Split('|')[2];
@@ -85,6 +92,10 @@ namespace Identity5Test
                 + message + Environment.NewLine
                 + survivor;
             SaveHistory($"{Tier} {Mode}|{result}");
+            FormHistory form = Application.OpenForms["FormHistory"] as FormHistory;
+            if (form != null)
+                form.UpdateHistory();
+
         }
 
         private string GetFortune()
@@ -109,6 +120,21 @@ namespace Identity5Test
             {
                 MessageBox.Show($"알 수 없는 오류가 발생했습니다.\n{ex.Message}", "알 수 없는 오류");
             }
+        }
+
+        internal void LoadHistory(string history)
+        {
+            string Tier = history.Split('|')[0].Split(' ')[0];
+            tbTier.Text = Tier;
+            string Mode = history.Split('|')[0].Split(' ')[1];
+            tbMode.Text = Mode;
+            string day = history.Split('|')[1];
+            string message = history.Split('|')[2];
+            string survivor = history.Split('|')[3];
+            tbResult.Text = Tier + " " + Mode + Environment.NewLine
+                + day + Environment.NewLine
+                + message + Environment.NewLine
+                + survivor;
         }
 
         private void tbTier_TextChanged(object sender, EventArgs e)
