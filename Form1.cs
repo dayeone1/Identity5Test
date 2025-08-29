@@ -71,15 +71,17 @@ namespace Identity5Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string birthday = tbTier.Text;
-            string birthyear = tbMode.Text;
+            string Tier = tbTier.Text;
+            string Mode = tbMode.Text;
             string result = GetFortune();
-            string saju = result.Split('|')[0];
+            string day = result.Split('|')[0];
             string message = result.Split('|')[1];
-            tbResult.Text = birthday + " " + birthyear + Environment.NewLine
-                + saju + Environment.NewLine
-                + message;
-            SaveHistory($"{birthday} {birthyear}|{result}");
+            String survivor = result.Split('|')[2];
+            tbResult.Text = Tier + " " + Mode + Environment.NewLine
+                + day + Environment.NewLine
+                + message + Environment.NewLine
+                + survivor;
+            SaveHistory($"{Tier} {Mode}|{result}");
         }
 
         private string GetFortune()
