@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbMode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbTier = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbResult = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.운세테스트내역ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,11 +49,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.tbMode);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.tbTier);
             this.groupBox1.Location = new System.Drawing.Point(12, 47);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(378, 391);
@@ -61,12 +61,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "내용 입력";
             // 
-            // textBox2
+            // tbMode
             // 
-            this.textBox2.Location = new System.Drawing.Point(47, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(299, 21);
-            this.textBox2.TabIndex = 4;
+            this.tbMode.Location = new System.Drawing.Point(47, 145);
+            this.tbMode.Name = "tbMode";
+            this.tbMode.Size = new System.Drawing.Size(299, 21);
+            this.tbMode.TabIndex = 4;
             // 
             // label2
             // 
@@ -85,6 +85,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "결과 확인하기";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -96,16 +97,16 @@
             this.label1.Text = "현재 5인격 티어를 입력해주세요!\r\nex: 3티어 -> 3";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // tbTier
             // 
-            this.textBox1.Location = new System.Drawing.Point(45, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 21);
-            this.textBox1.TabIndex = 0;
+            this.tbTier.Location = new System.Drawing.Point(45, 83);
+            this.tbTier.Name = "tbTier";
+            this.tbTier.Size = new System.Drawing.Size(301, 21);
+            this.tbTier.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.tbResult);
             this.groupBox2.Location = new System.Drawing.Point(406, 47);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(382, 391);
@@ -113,14 +114,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "오늘의 5인격 운세 결과";
             // 
-            // textBox3
+            // tbResult
             // 
-            this.textBox3.Location = new System.Drawing.Point(17, 20);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(359, 351);
-            this.textBox3.TabIndex = 0;
+            this.tbResult.Location = new System.Drawing.Point(17, 20);
+            this.tbResult.Multiline = true;
+            this.tbResult.Name = "tbResult";
+            this.tbResult.ReadOnly = true;
+            this.tbResult.Size = new System.Drawing.Size(359, 351);
+            this.tbResult.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -185,6 +186,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -201,9 +203,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbTier;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbMode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 파일ToolStripMenuItem;
@@ -211,7 +213,7 @@
         private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 도움말ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 정보보기ToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbResult;
     }
 }
 
