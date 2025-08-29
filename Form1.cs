@@ -108,5 +108,9 @@ namespace Identity5Test
             }
         }
 
+        private void tbTier_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -103,6 +103,7 @@
             this.tbTier.Name = "tbTier";
             this.tbTier.Size = new System.Drawing.Size(301, 21);
             this.tbTier.TabIndex = 0;
+            this.tbTier.TextChanged += new System.EventHandler(this.tbTier_TextChanged);
             // 
             // groupBox2
             // 
@@ -168,7 +169,7 @@
             // 정보보기ToolStripMenuItem
             // 
             this.정보보기ToolStripMenuItem.Name = "정보보기ToolStripMenuItem";
-            this.정보보기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.정보보기ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.정보보기ToolStripMenuItem.Text = "정보보기";
             this.정보보기ToolStripMenuItem.Click += new System.EventHandler(this.상담하기ToolStripMenuItem_Click);
             // 
@@ -180,7 +181,6 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
