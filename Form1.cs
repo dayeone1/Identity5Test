@@ -19,7 +19,8 @@ namespace Identity5Test
 
         private void 상담하기ToolStripMenuItem_Click(object sender, EventArgs e)
         { // = 정보보기. 뭔가 꼬여서 수정할 수 없음...
-
+            FormAbout form = new FormAbout();
+            form.ShowDialog();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace Identity5Test
 
         private void 운세테스트내역ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
